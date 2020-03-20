@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/*css reset*/
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/*html, body style. resetando comportamento padrão dos browsers*/
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+/*header style*/
+
+header{
+  background-color: #fff;
+  position:fixed;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1,nav{
+  padding:20px;
+}  
+
+header>nav>ul>li{
+  display: inline-block;
+  margin:0 10px;
+  cursor: pointer;
+}
+
+header>nav>ul>li>a{
+  text-decoration: none;
+  color: #010101;
+}
+
+/*main ocntent style*/
+#banner{
+  width:100vw;
+  height: 100vh;
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  margin-bottom:20px;
+}
+
+.exp1,.exp2{
+  padding:20px;
+}
+
+.exp1 div,article{
+  display: inline-block;
+  width:49%;
+}
+
+.exp1>.img{
+  background-image: url(../img/exp-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height:300px;
+}
+
+.exp2 div,article{
+  display: inline-block;
+  width:49%;
+}
+
+.exp2>.img{
+  background-image: url(../img/exp-2.jpg);
+  background-size: cover;
+  background-position: center;
+  height:300px;
+}
+
+.exp1>article, .exp2>article{
+  margin:10px;
+}
+
+.exp1 p,.exp2 p{
+  padding:10px 0;
+}
+
+/*form style*/
+#contato{
+  color: #fff;
+  background-color: darkgreen;
+}
+
+form{
+  width:400px;
+  margin:0 auto;
+  padding:40px;
+}
+
+form>*{
+  display: block;
+}
+
+label{
+  margin-top:10px;
+}
+
+input#button{
+  background-color: rgb(146, 255, 164);
+  margin-top:30px;
+  height:40px;
+  font-size: 1rem;
+  letter-spacing: 1.4px;
+  border:none;
+  cursor: pointer;
+  color:#010101;
+}
+
+input#button:hover{
+  background-color: rgb(55, 219, 82);
+}
+
+input,textarea{
+  border-radius:5px;
+  width:100%;
+  height:25px;
+  border: none;
+  margin-top:5px;
+  padding:2px;
+}
+
+textarea{
+  height:100px;
+}
+
+/*footer style*/
+footer>p{
+  padding:15px 0 15px 10px;
+  margin-left:20px;
+  font-size:0.9rem;
+}
+
+.hamburguer-menu{
+  display: none;
+}
+
+/*responsive media queries breakpoints*/
+@media(max-width:1236px){
+  .exp1 div, article{
+    width:48%;
+  }
+  .exp2 div,article{
+    width:48%;
+  }
+}
+
+@media(max-width:640px){
+  .exp1 div, article{
+    width:100%;
+    }
+  .exp2 div,article{
+    width:100%;
+    }
+    .exp1>article{
+      margin:0;
+    }
+    .exp2>article{
+      margin:0;
+    }
+
+    #menu>li{
+      display: none;
+    }
+
+    #menu>.hamburguer-menu{
+      display: inline-block;
+      background: url(../img/hamburguer-menu-icon.svg) #fff center no-repeat;
+      box-sizing: border-box;
+      width: 45px;
+      height: 33px;
+      position: absolute;
+      top:20px;
+      right:20px;
+      cursor: pointer;
+  }
+
+  #experiencias>.exp2{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media(max-width:390px){
+  form{
+    width:100%;
+  }
+}
